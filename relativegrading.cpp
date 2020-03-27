@@ -53,7 +53,11 @@ float Marks::final()
 int main() 
 {
     Marks M(26,41,6,9,8,80), N(46, 48, 9, 10, 8, 85),O(32, 39, 10, 10, 10, 65), P(33, 40, 10, 10, 10, 95),Q(39, 31, 9, 10, 10, 59);
-    if(M.final()>Marks::allMarks+1.5*(Marks::standardDev))
+    if(M.fat==0)
+    {
+        cout<<"N grade";
+    }
+    else if(M.final()>Marks::allMarks+1.5*(Marks::standardDev))
     {
         cout<<"S grade";
     }
